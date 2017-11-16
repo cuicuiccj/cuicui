@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/login2.css" />
+	<script src="./js/jquery-1.11.0.js"></script>
+	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body class="login">
+	<div class="wrap">
+		<div class="wrap-header">
+			<a title="Z商城" href="http://www.zol.com">
+				<img width="130" height="60" title="Z商城" alt="Z商城" src="http://icon.zol-img.com.cn/newshop/shop/index/logo_130x60.png">
+				<p>中关村在线旗下网上商城</p>
+			</a>
+			<p>已经有Z商城账号?
+				<a href="/">立即登录</a>
+			</p>
+
+
+		</div>
+	</div>
+	<!--第二部分
+	作者：offline
+	时间：2017-11-08
+	描述：注册区
+-->
+	<div class="container">
+		<div class="login_left">
+			<a href="/">
+				<img src="./img/ad2_1.jpg">
+			</a>
+		</div>
+		<div class="login_right">
+			<div class="login-head clearfloat" id="tabBtn">
+				<h3 class="curLogin">登录Z商城</h3>
+				<h3>商家登录</h3>
+			</div>
+			<div class="login-select">
+				<div class="input_box">
+					<input type="text" placeholder="手机号" id="login_tel">
+					<div class="mobile clearfloat" id="mobile">
+						<input type="text" placeholder="" id="verification">
+						<input type="text" placeholder="" id="verification-code">
+					</div>
+					<input type="password" placeholder="密码" id="login_password">
+				</div>
+				<div class="form-other clearfloat" id="other">
+					<a href="javascript:void(0)" class="mobile-m">手机动态码登录</a>
+					<a target="_blank" href="javascript:void(0)" class="password-icon">忘记密码？</a>
+				</div>
+				<input type="button" value="登 录" id="logo">
+				<div class="cooperation clearfloat">
+					<div class="xian"></div>
+					<p>合作账号登录</p>
+					<div class="xian"></div>
+				</div>
+				<div class="login-foot clearfloat">
+					<a target="_blank" class="weixin" href="">用微博账号登录</a>
+					<a target="_blank" class="sina" href="">用微博账号登录</a>
+					<a target="_blank" class="qq" href="">用QQ账号登录</a>
+					<a target="_blank" class="alipay" href="">用支付宝账号登录</a>
+					<a target="_blank" class="baidu" href="">用百度账号</a>
+				</div>
+			</div>
+			<div class="login-select">
+				<div class="input_box">
+					<input type="text" placeholder="用户名" id="login_tel">
+					<input type="password" placeholder="密码" id="login_password">
+				</div>
+				<input type="button" value="登 录" id="logo">
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<hr />
+		<footer>
+			<a href="">关于Z商城</a>
+			<span>|</span>
+			<a href="">联系我们</a>
+			<span>|</span>
+			<a href="">帮助中心</a>
+			<spn class="bottom-span">&copy;2017.中关村在线 版权所有</span>
+		</footer>
+	</div>
+	<script>
+		window.onload = function () {
+			//tab 切换
+			var tabBtn = document.getElementById("tabBtn").children;
+			var tabBox = document.getElementsByClassName("login-select");
+			var otherL = document.getElementById("other");
+			var mobile = document.getElementById("mobile");
+			mobile.style.display = "none";
+			tabBox[0].style.display = "block";
+			for (let i = 0; i < tabBtn.length; i++) {
+				tabBtn[i].index = i;
+				tabBtn[i].onclick = function () {
+					for (let j = 0; j < tabBtn.length; j++) {
+						tabBtn[j].className = "";
+						tabBox[j].style.display = "none"
+					}
+					this.className = "curLogin";
+					tabBox[this.index].style.display = "block"
+				}
+			}
+			otherL.onclick = function () { 
+				mobile.style.display = "block";
+			 }
+			
+			//点击登陆
+			if(getCookie("info")){
+				var objCookie=JSON.parse(getCookie("info"));
+			}else{
+				var objCookie={};
+			}
+			$("#logo").click(function(){
+				var username=$("#login_tel").val();
+				var psw=$("#login_password").val();
+				if(objCookie[username]==psw){
+					location.href="shouye.html?user="+username;
+				}else{
+					console.log(2);
+				}
+			})
+			
+			
+		}
+	</script>
+</body>
+
+</html>

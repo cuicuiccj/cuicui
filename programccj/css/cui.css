@@ -1,0 +1,31 @@
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{ font-family:"微软雅黑";}
+input,a{outline:none;}
+
+section{width:1200px;height:1650px;border:1px solid white;margin: 0 auto;}
+
+section li{width:218px;height:403px;float:left;padding: 0 10px;font-size: 12px;margin-bottom: 10px;border:1px solid white;}
+section li div{width:218px;height:240px;display: flex;justify-content: center;align-items: center;}
+section li div img{width:200px;height:200px;}
+section li p:nth-of-type(1) a{font-size: 12px;color: black;}
+section li span:nth-of-type(1){margin-right:80px ;}
+section li p:nth-of-type(2){font-size: 16px;color: red;}
+section li p{margin-bottom: 12px;}
+section li p:nth-of-type(3){margin-top: 15px;}
+section li p:nth-of-type(4) a{display: none;}
+section li p:nth-of-type(4) a:hover{display: block;}
+section li:hover{border:1px solid #A4A4BF;}
+section li p:nth-of-type(3) a:hover{color: red;text-decoration: underline;}
+
+
+
+
+
+
+
+

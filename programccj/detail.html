@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+		<script type="text/javascript" src="js/detail.js">
+		</script>
+		<script type="text/javascript" src="js/jquery-1.11.0.js">
+			
+		</script>
+		
+	</head>
+	<body>
+		
+			<div class="wrap">
+		<header>
+			
+		<div class="header-first"><span><a class="a-first" href="">商城首页</a></span>
+		<span>hi~欢迎来到Z商城首页，请</span>
+		<span><a href="">登录</a></span>
+		<span><a href="">免费注册</a></span></div>
+			<ul>
+				<li><a href="">我的订单</a></li>
+				<li id="li-one" class="lit"><a href="">买家中心</a>
+					<ul class="lit-sub">
+						<li>关注的店铺<a href="">30</a></li>
+					    <li>关注的商品<a href="">40</a></li>
+					</ul>
+					
+				</li>
+				<li><a href="">购物车0件</a></li>
+				<li><a href="">帮助中心</a><b>|</b></li>
+				<li class="phone-shop"><a href="">手机商城</a>
+					<ul><li><img src="img/er-wei-ma.png"/></li></ul>
+				</li>
+				<li><a href="">中关村在线</a></li>
+				<li class="connect"><a href="">联系客服</a>
+					<ul>
+						<li>400-188-1999</li>
+					</ul>
+				</li>
+				
+			</ul>
+			
+		</header>
+		</div>
+		
+		<div class="contain">
+			<div class="nav">
+				<a href=""><img src="img/01.jpg"/></a>
+				<div class="list" style="position: relative;">
+					<input type="text" placeholder="找找您想要的商品"/ id="txt"><ul id="lists"  style="position: absolute;z-index: 10;width:200px;height:300px;top:35px;left:-3px;" ></ul>
+				<input type="button"  value="搜索"/>
+				<a href="">魅族手机</a><a href="">DIY主机降1000元</a>
+				<a href="">Z2Pro尊享版</a>
+				<a href="">超极本降1400</a>
+				<a href="">荣耀V9</a>
+				</div>
+					<script>
+					
+					
+		var oUl=document.getElementById("lists");
+		var ipt=document.getElementById("txt");
+//		console.log(ul)
+	   ipt.oninput=function(){
+	  	   var val=ipt.value;
+	  	   var oScript=document.createElement("script");
+		oScript.src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val+"&sugmode=2&json=1&p=3&sid=1439_21125_17001_24328_20928&req=2&bs=aaa&csor=3&pwd=aaa&cb=date";
+			
+		document.body.appendChild(oScript);
+		document.body.removeChild(oScript);
+	   }
+	
+	   function date(data){
+	   	console.log(data.s);
+	   	var dat=data.s;
+	   	var str="";
+	   	
+	   	for(var i=0;i<dat.length;i++){
+//	   		console.log(i);
+	   		str+="<li>"+dat[i]+"</li>";
+	   	}
+//	   	console.log(str);
+		oUl.innerHTML=str;
+	   	 
+	   }
+		
+				</script>
+				
+				
+				<div class="list-next">	
+				<a href=""><img src="img/001.jpg" />我的订单</a>
+				<a href=""><img src="img/002.jpg" alt="" />我的优惠劵</a>
+				<a href=""><img src="img/001.jpg"/>购物车</a>
+			</div>
+			</div>
+			
+		<div class="listi">
+			
+			<div id="zoomBox">
+			<div id="midArea">
+				<img src="img/1.jpg">
+				<div id="zoom"></div>
+			</div>
+		
+			<div id="bigArea">
+				<img src="img/2.jpg">
+			</div>
+			
+			
+			<div id="smallArea">
+				<ul>
+					<li><img src="img/1.jpg"></li>
+					<li><img src="img/2.jpg"></li>
+					<li><img src="img/3.jpg"></li>
+					<li><img src="img/4.jpg"></li>
+					<li><img src="img/5.jpg"></li>
+				</ul>
+			</div>
+			      
+		</div>
+	
+	
+		
+		</div>
+		
+		<section>
+			<div class="section-left">
+			<p>锤子坚果Pro 128GB 全网通 移动联通4G手机</p>
+			<p>【11.11到店玩】千万豪礼任你拿，￥4188限时抢inphone8p,50元好礼到店既送,点击查看</p>
+			<img src="img/1100.jpg" alt="" />
+			<span>配送：</span><span class="par" id="weizhi">河南
+			
+			<ul id="oul">
+				
+		         <li><a hre ="">北京</a></li>
+				 <li><a hre ="">西安</a></li>
+				 <li><a hre ="">城都</a></li>
+				 <li><a hre ="">青岛</a></li>
+				 <li><a hre ="">平顶山</a></li>
+				 <li><a hre ="">广西</a></li>
+				 <li><a hre ="">青海</a></li>
+				 <li><a hre ="">新疆</a></li>
+				 <li><a hre ="">北京</a></li>
+				 <li><a hre ="">西安</a></li>
+				 <li><a hre ="">城都</a></li>
+				 <li><a hre ="">青岛</a></li>
+				 <li><a hre ="">河南</a></li>
+				 <li><a hre ="">广西</a></li>
+				 <li><a hre ="">青海</a></li>
+				  <li><a hre ="">城都</a></li>
+				 <li><a hre ="">青岛</a></li>
+				 <li><a hre ="">河南</a></li>
+				 <li><a hre ="">广西</a></li>
+				 <li><a hre ="">青海</a></li>
+				  <li><a hre ="">河南</a></li>
+				 <li><a hre ="">广西</a></li>
+				 <li><a hre ="">青海</a></li>
+				  <li><a hre ="">城都</a></li>
+				 <li><a hre ="">青岛</a></li>
+				 <li><a hre ="">河南</a></li>
+				 <li><a hre ="">广西</a></li>
+				 <li><a hre ="">青海</a></li>
+			</ul>
+			
+				<script>
+				$(function(){		
+		   $("#oul li").click(function(){
+		   $("#weizhi").text($(this).children("a").text())
+					})
+				})
+				
+				
+			</script>
+			
+			
+			
+			
+			</span><span>可送达，快递包邮</span><br /><br />
+			
+			<p class="firset"><a >评　价：</a><a>购买评价</a><a href="">108</a><a href="">|</a><a href="">成交记录</a><a href="">221</a></p>
+			
+			<p>服务保障：由<a href="">汇通数	码风暴专营店</a>发货并提供以下承诺保障</p>
+			<ul class="oul">
+				<li><a href=""><img src="img/11-1.jpg" alt="" /></a></li>
+				<li><a href=""><img src="img/11-2.jpg" alt="" /></a></li>
+				<li><a href=""><img src="img/11-3.jpg" alt="" /></a></li>
+				
+			</ul>
+			
+			<hr />
+			
+			<div class="data">
+		<li>版本：</li><li>64GB</li><li>128GB</li><li>32GB</li>
+			
+	</div>
+			
+			<div class="data1">
+		<li>商品颜色:</li><li>酒红色</li><li>细红线特别版</li><li>碳黑色</li><li>巧克力</li><li>浅金色</li>
+			
+	</div>
+	
+	<div class="data1"><li>内存容量:</li><li>行货128G</li></div>　　　　　　
+	<div　class="data1"><li>购买方式:</li><li>非合约机</li><li>+</li>
+	 		<li>-</li><li>数量</li><li id="last-li"><a href="car.html">立即购买</a></li></div>
+
+			
+	
+	 </div>
+	
+			
+			</div>
+				
+	
+	          
+	         
+	
+	
+	
+	
+			</section>
+	
+		
+		
+		
+		
+	</body>
+</html>

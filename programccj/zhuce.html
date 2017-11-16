@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/login.css" />
+	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/jquery-1.11.0.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="wrap-header">
+			<a title="Z商城" href="http://www.zol.com">
+				<img width="130" height="60" title="Z商城" alt="Z商城" src="http://icon.zol-img.com.cn/newshop/shop/index/logo_130x60.png">
+				<p>中关村在线旗下网上商城</p>
+			</a>
+			<p>已经有Z商城账号?
+				<a href="/">立即登录</a>
+			</p>
+
+
+		</div>
+	</div>
+	<!--第二部分
+	作者：offline
+	时间：2017-11-08
+	描述：注册区
+-->
+	<div class="contain">
+
+		<p class="con-p">30秒快速注册,加入Z商城</p>
+		<div class="con-left">
+			<ul>
+				<li>用手机号注册</li>
+				<li></li>
+			</ul>
+			<form action="" id="ccjForm">
+				<div class="fm-first">
+					<div class="label">
+						<em>*</em>
+						<em>手机号:</em>
+					</div>
+					<input type="text" id="tel" />
+					<span class="wrong-tips" id="telinfo"></span>
+				</div>
+				<p>　填写此手机号码</p>
+
+				<div class="fm-two">
+					<div class="label">
+						<em>*</em>
+						<em>验证码:</em>
+					</div>
+					<input type="text" id="num" />
+					<input type="text" />
+					<a href="">换一张</a>
+					<span class="wrong-tips" id="numinfo" style="margin-left: 50px;"></span>
+				</div>
+				<p>　请填写图片验证码</p>
+
+				<div class="fm-third">
+					<div class="label">
+						<em>*</em>
+						<em>验证码:</em>
+					</div>
+					<input type="text" id="duanxin" />
+					<input type="text" value="获取短信验证" />
+					<span class="wrong-tips" id="duanxininfo"></span>
+				</div>
+
+				<p>　请填写此手机号码，然后点击[获取验证码]</p>
+				<div class="fm-pw">
+					<div class="label">
+						<em>*</em>
+						<em>密码:</em>
+					</div>
+					<input type="password" id="password" />
+					<span class="wrong-tips" id="passwordinfo"></span>
+				</div>
+				<p>　0-16位字母和数字的组合，不可用特殊字符</p>
+				<div class="fm-queren">
+					<div class="label">
+						<em>*</em>
+						<em>确认密码:</em>
+					</div>
+					<input type="password" id="repassword" />
+					<span class="wrong-tips" id="repasswordinfo"></span>
+				</div>
+				<p>　再次输入密码</p>
+				<div class="fm-check">
+					<input type="checkbox" />
+					<span>同意
+						<a href="">《商城用户协议》</商城用户协议>
+						</a>
+						<a href="">《隐私权说明》</隐私权说明>
+						</a>
+					</span>
+				</div>
+
+				<div class="btn">
+					<a href="javascript:;"><input type="button" value="注册"></a>
+				</div>
+			</form>
+
+
+		</div>
+
+		<div class="right">
+
+			<span>如果您已经注册，请
+				<a href="">直接登陆</a>或者用一下方式登录：</span>
+			<a href="">
+				<img src="img/pig-weixin.jpg" alt="" />
+			</a>
+			<a href="">
+				<img src="img/pig-xinlang.jpg" alt="" />
+			</a>
+			<a href="">
+				<img src="img/pig-qq.jpg" alt="" />
+			</a>
+			<a href="">
+				<img src="img/pig-zhifubao.jpg" alt="" />
+			</a>
+			<a href="">
+				<img src="img/pig-baidu.jpg" alt="" />
+			</a>
+
+		</div>
+
+	</div>
+
+	<hr />
+	<footer>
+		<a href="">关于Z商城</a>
+		<span>|</span>
+		<a href="">联系我们</a>
+		<span>|</span>
+		<a href="">帮助中心</a>
+		<spn class="bottom-span">&copy;2017.中关村在线 版权所有</span>
+	</footer>
+</body>
+<script >
+	$(function(){
+		
+	})
+</script>
+<script type="text/javascript">
+	$(function(){ 
+		//手机号验证
+		$("#tel").blur(function(){
+			checktel();
+		})
+		function checktel() {
+			var telVla = $("#tel").val();
+			$('#telinfo').html("");
+			if (telVla == "") {
+				$("#telinfo").html("手机号值不能为空");
+				$("#telinfo")[0].style.backgroundPosition = "-155px -184px";
+				return false;
+			} else {
+//				var shoujihao = /^1[3-8]+\d{9}/;
+				var shoujihao = /^(0|86|17951)?(13[0-9]|15[012356789]|18[0-9]|14[57])[0-9]{8}$/;
+				if (shoujihao.test(telVla)) {
+					$('#telinfo')[0].innerHTML = "";
+					if (telVla.length != 11) {
+						$("#telinfo")[0].innerHTML = "请输入11位有效的手机号码！";
+						$("#telinfo")[0].style.backgroundPosition = "-155px -184px";
+						return false;
+					}else {
+						$("#telinfo")[0].innerHTML = "正确";
+						$("#telinfo")[0].style.backgroundPosition = "-155px -148px";
+						return false;
+					}
+				}else{
+					console.log("错误")
+				}
+				if (isNaN(telVla)) {
+					$('#telinfo')[0].innerHTML = "";
+					$("#telinfo")[0].innerHTML = "请输入有效的手机号码！";
+					$("#telinfo")[0].style.backgroundPosition = "-155px -184px";
+				}
+			}
+		}
+		//验证码
+		$("num").onblur = function () {
+			ccjnum();
+		}
+		function ccjnum() {
+			$("numinfo").innerHTML = "";
+			var numVal = $("num").value;
+			if (numVal == "") {
+				$("numinfo").innerHTML = "验证码不能为空";
+				$("numinfo").style.backgroundPosition = "-155px -184px";
+				return false;
+			} else {
+				$("numinfo").innerHTML = "正确";
+				$("numinfo").style.backgroundPosition = "-155px -148px";
+			}
+		}
+		//手机验证码
+		$("duanxin").onblur = function () {
+			checkDuanxin();
+		}
+		function checkDuanxin() {
+			var duanxin = $('duanxin').value;
+			$('duanxininfo').innerHTML = "";
+			if (duanxin == "") {
+				$("duanxininfo").innerHTML = "验证码不能为空";
+				$("duanxininfo").style.backgroundPosition = "-155px -184px";
+				return false;
+			} else {
+				$('duanxininfo').innerHTML = "";
+				var numCode = /^[0-9,]*$/;
+				if (numCode.test(duanxin)) {
+					$("duanxininfo").innerHTML = "正确";
+					$("duanxininfo").style.backgroundPosition = "-155px -148px";
+
+				} else {
+					$("duanxininfo").innerHTML = "验证码格式错误";
+					$("duanxininfo").style.backgroundPosition = "-155px -184px";
+				}
+			}
+		}
+		//校验密码  
+		$("#password").blur(function(){
+			checkPassword();
+		})
+		function checkPassword() {
+			$('#passwordinfo')[0].innerHTML = "";
+			var password = $('#password').val();
+			if (password == "") {
+				$("#passwordinfo")[0].innerHTML = "密码不能为空";
+				return false;
+			}
+			if (password.length < 6) {
+				$("#passwordinfo")[0].innerHTML = "密码长度必须大于或者等于6";
+				return false;
+			}
+		}
+		$("#repassword").blur(function(){
+			checkRepassword();
+		})
+		function checkRepassword() { //校验重新输入的密码  
+			var repassword = $('#repassword').val();
+			var password = $('#password').val();
+			$('#repasswordinfo')[0].innerHTML = "";
+			if (repassword != password) {
+				$("#repasswordinfo")[0].innerHTML = "两次输入的密码不一致";
+				$("#repasswordinfo")[0].style.backgroundPosition = "-155px -184px";
+				return false;
+			} else {
+				$("#repasswordinfo")[0].innerHTML = "正确";
+				$("#repasswordinfo")[0].style.backgroundPosition = "-155px -148px";
+			}
+		}
+//		$("ccjForm").onsubmit = function () { 
+//			ccjForm()
+//			return false;
+//		 }
+//		function ccjForm() { 
+//			checktel();
+//			ccjnum();
+//			checkDuanxin();
+//			checkPassword();
+//		 }
+		
+		//点击注册事件
+		if(getCookie("info")){
+			var objCookie=JSON.parse(getCookie("info"));
+		}else{
+			var objCookie={};
+		}
+		$(".btn input[type=button]").click(function(){
+			if($("#tel").siblings("span").html()=="正确" && $("#passwordinfo").html()=="" && $("#repasswordinfo").html()=="正确"){
+				objCookie[$("#tel").val()]=$("#password").val();
+				var strCookie=JSON.stringify(objCookie);
+				setCookie("info",strCookie,7);
+				location.href="login.html";
+			}
+		})
+		
+		
+		
+	})
+</script>
+
+</html>

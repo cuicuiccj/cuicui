@@ -1,0 +1,67 @@
+
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{ font-family:"微软雅黑";}
+input,a{outline:none;}
+
+.wrap{width:100%;}
+.wrap-header{width:990px;margin:auto;/*background: pink;*/height:90px;background: url(../img/pig-header.jpg) no-repeat;background-position: 135px 25px;}
+.wrap-header img{float:left;margin-top: 15px;}
+.wrap-header p{float:left;line-height: 90px;margin-left:20px;color: #666;}
+.wrap-header>a{display: block;width:780px;height:90px;float: left;}
+.wrap-header a+p{font-size: 14px;}
+.wrap-header a+p>a{margin-left: 12px;color:red;}
+.contain{width:990px;height:760px;border:1px solid #e0e0e0;margin: 0 auto;margin-bottom: 50px;}
+
+
+.contain .con-p{height:57px;background:#fafafa;padding:0 92px;line-height: 57px;font-size: 20px;color:#b19999;}
+
+.contain .con-left{width:700px;height:645px;padding:30px 0;float:left;}
+.contain .con-left ul{height:40px;width:615px;padding:0 85px;margin-bottom: 25px;}
+.contain .con-left ul li{width:256px;height:40px;float:left;}
+.contain .con-left ul li:nth-child(1){border-left:1px solid #e6e6e6;border-right:1px solid #e6e6e6;border-top:3px solid #f40;text-align: center;line-height: 40px;}
+.contain .con-left ul li:nth-child(2){
+	border-bottom:1px solid #e6e6e6;
+	
+}
+.contain form{width:600px;height:610px;/*border:1px solid blue;*/padding-left: 100px;}
+.contain form em:nth-child(1){font-style: normal;color:red;}
+.contain form em:nth-child(2){font-style: normal;color:#666666;margin: 0 8px;}
+.contain form .fm-first{height:42px;line-height: 42px;}
+.contain form .fm-first input{width:278px;height:34px;}
+.contain form p{color:#aaaaaa;margin-left: 78px;font-size: 14px;margin-top:8px;margin-bottom: 18px;}
+
+.contain form .fm-two input:nth-of-type(1){width:158px;height:34px;}
+
+.contain form .fm-two input:nth-of-type(2){width:100px;height:34px;
+margin-left: 17px;border:0;border:1px solid black;}
+.contain form .fm-two a{margin-left: 10px;font-size: 14px;color:#0000FF;
+    font: 12px/40px "Arial";}
+
+.contain form .fm-third input:nth-of-type(1){width:158px;height:34px;}
+.contain form .fm-third input:nth-of-type(2){width:100px;height:34px;margin-left: 10px;text-align: center;background:#f8f8f8;border:0;border:2px solid #e0e0e0;}
+
+.contain form .fm-pw input,.contain form .fm-queren input{width:278px;height:34px;}
+
+.contain form .fm-check span{font-size: 14px;}
+.contain form .btn input{width:278px;height:34px;margin-top: 30px;background: #dd2f2f;border:0;text-align: center;line-height: 34px;font-size: 16px;color:white;}
+
+.contain .right{width:175px;height:310px;border-left:1px solid #AAAAAA;float: left;margin-top: 20px;padding-left:25px;}
+
+.contain .right span{font-size: 13px;}
+
+.contain .right img{display: block;margin:14px 0;}
+footer{width:990px;height:27px;padding-top: 10px;margin: 0 auto;}
+
+footer a{color:#666666;font-size: 14px;}
+footer span{margin: 13px;font-size: 14px;}
+footer .bottom-span{margin-left: 500px;color:#666666;font-size: 14px;}
+
+/* 注册 */
+form div{position: relative}
+form .label{float: left;font: 14px/40px "Arial";width: 86px}
+.wrong-tips{display: inline-block;position: absolute;top: 0;left: 383px;padding: 0 0 0 20px;font: 12px/40px "Arial";color: #ff3333;white-space: nowrap;background: url(https://login.zol.com/image/login-bg.png) no-repeat;background-position: -155px -184px;}

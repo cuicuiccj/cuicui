@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/car.css"/>
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		<div id="banner">	
+		</div>
+		
+
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			var  xiangxi={};//商品名称和id
+			var str="";
+			xiangxi=JSON.parse(getcooie("car"));
+
+			$.getJSON("shuju.json",function(data){
+	
+				for(var i in xiangxi){
+		
+					for(var j=0;j<data.length;j++){
+		
+						if(data[j].id==i){
+				str+="<div><img src='"+data[j].imgsrc+"'<p>"+data[j].title+"</p><li><span class='jia'>+</span><span class='count'>"+xiangxi[i]+"</span><span class='jian'>-</span></li></div>"
+						}
+				}
+			
+					
+					
+				}
+					$("#banner").html(str);
+				
+var jia=document.getElementsByClassName("jia")[0];
+var jian=document.getElementsByClassName("jian")[0];
+		
+		jia.onclick=function(){
+			var num=Number($(this).siblings(".count").html());
+			num++;
+			$(this).siblings(".count").html(num);
+			
+		}
+		jian.onclick=function(){
+			var num=Number($(this).siblings(".count").html());
+			num--;
+			if(num<=1){
+				num=1;
+			}
+			$(this).siblings(".count").html(num);
+			
+			
+		}
+			})
+			
+			
+			 function addcookie(obj,value,day) {
+        var nowedate=new Date();
+        nowedate.setDate(nowedate.getDate()+day);
+        document.cookie = obj + "=" + value + ";expires="+nowedate;
+    }
+    function getcooie(obj) {
+        var str = document.cookie;//字符串
+        var fstr = str.split(";")//字符串分割数组
+        for (var i = 0; i < fstr.length; i++) {
+            var ssr = fstr[i].split("=")//将数组的每一项以=分割;这样的话得到的数组第一个元素为属性名,第二个元素为属性值;
+            if (ssr[0] == obj) {
+                return ssr[1];
+            }else {}
+        }
+    }
+    function remmove(obj) {
+        addcookie(obj,1,-1)
+    }
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/shouye.css" />
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/startMove.js" type="text/javascript" charset="utf-8"></script>
+ <script type="text/javascript" src="js/date.js"></script>
+	
+ <script type="text/javascript" src="js/jquery-1.11.0.js" >
+ 	
+ </script>
+
+		
+	</head>
+	<body>
+		<div class="wrap">
+		<header>
+			
+		<div class="header-first"><span><a class="a-first" href="">商城首页</a></span>
+		<span>hi~欢迎来到Z商城首页，请</span>
+		<span><a href="">登录</a></span>
+		<span><a href="">免费注册</a></span><span ></span></div>
+			<ul>
+				<li><a href="">我的订单</a></li>
+				<li id="li-one" class="lit"><a href="http://my.zol.com/">买家中心</a>
+					<ul class="lit-sub">
+						<li>关注的店铺<a href="">30</a></li>
+					    <li>关注的商品<a href="">40</a></li>
+					</ul>
+					
+				</li>
+				<li><a href="">购物车0件</a></li>
+				<li><a href="">帮助中心</a><b>|</b></li>
+				<li class="phone-shop"><a href="">手机商城</a>
+					<ul><li><img src="img/er-wei-ma.png"/></li></ul>
+				</li>
+				<li><a href="">中关村在线</a></li>
+				<li class="connect"><a href="">联系客服</a>
+					<ul>
+						<li>400-188-1999</li>
+					</ul>
+				</li>
+				
+			</ul>
+			
+		</header>
+		</div>
+		
+		
+		<div class="pic">
+			<a href=""><img src="img/pic.jpg" alt="" /></a>
+		</div>
+		
+		
+		
+		<div class="banner">
+			<h1 class="logo"><a href=""></a></h1>
+			<span class="city-location"><span id="weizhi">上海</span>
+			<ul class="city-list" id="oul">
+			
+		         <li><a href ="tuangou.html">北京</a></li>
+				 <li><a href ="tuangou.html">西安</a></li>
+				 <li><a href ="tuangou.html">城都</a></li>
+				 <li><a href ="tuangou.html">青岛</a></li>
+				 <li><a href ="tuangou.html">平顶山</a></li>
+				 <li><a href ="tuangou.html">广西</a></li>
+				 <li><a href ="tuangou.html">青海</a></li>
+				 <li><a href ="tuangou.html">新疆</a></li>
+				 <li><a href ="tuangou.html">北京</a></li>
+				 <li><a href ="tuangou.html">西安</a></li>
+				 <li><a href ="tuangou.html">城都</a></li>
+				 <li><a href ="tuangou.html">青岛</a></li>
+				 <li><a href ="tuangou.html">河南</a></li>
+				 <li><a href ="tuangou.html">广西</a></li>
+				 <li><a href ="tuangou.html">青海</a></li>
+				 <li><a href ="tuangou.html">新疆</a></li>
+		          <li><a href ="tuangou.html">北京</a></li>
+				 <li><a href ="tuangou.html">西安</a></li>
+				 <li><a href ="tuangou.html">城都</a></li>
+				 <li><a href ="tuangou.html">青岛</a></li>
+				 <li><a href ="tuangou.html">河南</a></li>
+				 <li><a href ="tuangou.html">广西</a></li>
+				 <li><a href ="tuangou.html">青海</a></li>
+				 <li><a href ="tuangou.html">新疆</a></li>
+				 <li><a href ="tuangou.html">北京</a></li>
+				 <li><a href ="tuangou.html">西安</a></li>
+				 <li><a href ="tuangou.html">城都</a></li>
+				 <li><a href ="tuangou.html">青岛</a></li>
+				 <li><a href ="tuangou.html">河南</a></li>
+				 <li><a href ="tuangou.html">广西</a></li>
+				 <li><a href ="tuangou.html">青海</a></li>
+				 <li><a href ="tuangou.html">新疆</a></li>
+			</ul>
+			</span>
+			<script>
+				$(function(){
+					
+					
+					$("#oul li").mouseenter(function(){
+						
+			$("#weizhi").text($(this).children("a").text())
+			
+				
+					})
+					
+					
+				
+			})	
+			</script>
+			
+			<div class="search-box">
+				<form action="" method="post" class="noon" style="position: relative;">
+					
+			 	  
+				
+				<input type="text" name="" id="txt" placeholder="找找您想要的商品" /><ul id="lists"  style="position: absolute;z-index: 10;width:200px;height:300px;top:30px;left:-6px;"></ul></form>
+			<script>
+				var oUl=document.getElementById("lists");
+		var ipt=document.getElementById("txt");
+//		console.log(ul)
+	   ipt.oninput=function(){
+	  	   var val=ipt.value;
+	  	   var oScript=document.createElement("script");
+		oScript.src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val+"&sugmode=2&json=1&p=3&sid=1439_21125_17001_24328_20928&req=2&bs=aaa&csor=3&pwd=aaa&cb=date";
+			
+		document.body.appendChild(oScript);
+		document.body.removeChild(oScript);
+	   }
+	
+	   function date(data){
+	   	console.log(data.s);
+	   	var dat=data.s;
+	   	var str="";
+	   	
+	   	for(var i=0;i<dat.length;i++){
+//	   		console.log(i);
+	   		str+="<li>"+dat[i]+"</li>";
+	   	}
+//	   	console.log(str);
+		oUl.innerHTML=str;
+	   	 
+	   }
+		
+	</script>		
+				
+				<div class="search"><a href="">11.11同城购  ￥4188抢 iphone8P</a></div>
+				<div class="search-next"><a href="">三星Note8</a></div>
+			</div>
+			<div class="btn">
+				<input type="button" value="搜索"  />
+			</div>
+			
+			
+			<div class="right">
+			 <a class="right-one" href=""><span></span><span>我的订单</span></a>
+			  <a class="right-one" href=""><span></span><span>我的优惠劵</span></a>
+			    <a class="right-one two" href=""><span></span><span>购物车</span></a>
+			  </div>
+			  
+		
+			
+		</div>
+		
+		<div class="nav-box">
+			<ul>
+				<li class="nav-all">全部分类
+				<ul class="list">
+					<li class="list-one">
+						<a href="">手机</a>
+					</li>
+					<li><a href="">电脑</a></li>
+					<li><a href="">	DIY</a></li>
+					<li><a href="">数码</a></li>
+					<li><a href="">外设</a></li>
+					<li><a href="">智能</a></li>
+				</ul>
+				</li>
+				<li class="nav-first"><a href="">首页</a></li>
+				<li><a href="tuangou.html">团购</a></li>
+				<li><a href="xiangqing.html">电子竞技</a></li>
+			</ul>
+		</div>
+		<!--
+        	作者：offline
+        	时间：2017-11-09
+        	描述：lunbo;
+        -->
+			<div id="lunbo">
+				
+				<div id="banner">
+			<ul id="scrollImg">
+				<li>
+					<a href=""><img src="img/lunbo-one.jpg"></a>
+				</li>
+				<li>
+					<a href=""><img src="img/lunbo-two.jpg"></a>
+				</li>
+				<li>
+					<a href=""><img src="img/lunbo-three.jpg"></a>
+				</li>
+			</ul>
+			<ul id="focusList">
+				<li class="cur">1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<div class="btns">
+				<span class="prev"><</span>
+				<span class="next">></span>
+			</div>
+		</div>
+			</div>
+			
+		<div class="menu-wrap">
+			<div class="menu">
+				<div class="left"><a href="xiangqing.html"><img src="img/menu-left.jpg" alt="" /></a></div>
+				<div class="middle">
+					<ul>
+						
+						<li><div class="first">
+							<h5>电商参考价：￥1799.00</h5>
+							<h4><a href="">评测</a><span>|</span><a href="">视频</a><span>|</span><a href="">点评</a></h4>
+						</div><a href="xiangqing.html"><img src="img/pic-1.jpg" alt="" /></a><p>锤子坚果Pro 128G</p><p>￥1755</p><span>剩余:<b>2</b>天<b>00</b>小时<b>43</b>分<b>59</b>秒</span></li>
+						<li><div class="first">
+							<h5>电商参考价：￥暂无</h5>
+							<h4><a href="">评测</a><span>|</span><a href="">视频</a><span>|</span><a href="">点评</a></h4>
+						</div><a href="xiangqing.html"><img src="img/pic-2.jpg" alt="" /></a>
+						<p>索尼无线蓝牙耳机</p><p>￥418</p><span>剩余:<b>8</b>天<b>00</b>小时<b>50</b>分<b>30</b>秒</span>
+						</li>
+						<li><div class="first">
+							<h5>电商参考价：￥暂无</h5>
+							<h4><a href="">评测</a><span>|</span><a href="">视频</a><span>|</span><a href="">点评</a></h4>
+						</div><a href="xiangqing.html"><img src="img/pic-3.jpg" alt="" /></a>
+						<p>【送网线】必连路由器</p><p>￥129</p><span>剩余:<b>3</b>天<b>02</b>小时<b>11</b>分<b>20</b>秒</span>
+						</li>
+						<li><div class="first">
+							<h5>电商参考价：￥2299.00</h5>
+							<h4><a href="">评测</a><span>|</span><a href="">视频</a><span>|</span><a href="">点评</a></h4>
+						</div><a href="xiangqing.html"><img src="img/pic-4.jpg" alt="" /></a>
+						
+						<p>【壳膜】荣耀9</p><p>￥2246</p><span>剩余:<b>1</b>天<b>07</b>小时<b>11</b>分<b>03</b>秒</span>
+						</li>
+						<li><div class="first">
+							<h5>电商参考价：￥1799.00</h5>
+							<h4><a href="">评测</a><span>|</span><a href="">视频</a><span>|</span><a href="">点评</a></h4>
+						</div><a href="xiangqing.html"><img src="img/pic-5.jpg" alt="" /></a>
+						<p>【壳膜】荣耀9</p><p>￥2098</p><span>剩余:<b>3</b>天<b>05</b>小时<b>11</b>分<b>08</b>秒</span>
+						
+						
+						</li>
+						<li><div class="first">
+							<h5>电商参考价：￥6968.00</h5>
+							<h4><a href="">评测</a><span>|</span><a href="">视频</a><span>|</span><a href="">点评</a></h4>
+						</div><a href="xiangqing.html"><img src="img/pic-6.jpg" alt="" /></a>
+						<p>Beats Solo3  头...</p><p>￥5999</p><span>剩余:<b>4</b>天<b>06</b>小时<b>26</b>分<b>37</b>秒</span>
+					</li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="right-top">
+						
+					<div class="right-top-lt"><a href="xiangqing.html"><img src="img/right-1.jpg" alt="" /></a></div>
+					<div class="right-top-rg">
+						<p><a class="rg-top" href="">锤子坚果Pro 32GB</a></p>
+						<p><a class="rg-middle" href="">￥--</a></p>
+						<p><a class="rg-footer" href="">本地服务</a></p>
+						<a class="rg-bottom" href="">到店团</a>
+					</div>
+					</div>
+					
+					
+					<div class="right-top">
+						
+					<div class="right-top-lt"><a href=""><img src="img/right-2.jpg" alt="" /></a></div>
+					<div class="right-top-rg">
+						<p><a class="rg-top" href="">中兴 Pro 32GB..</a></p>
+						<p><a class="rg-middle" href="">￥--</a></p>
+						<p><a class="rg-footer" href="">本地服务</a></p>
+						<a class="rg-bottom" href="">到店团</a>
+					</div>
+					</div>
+					
+					
+					<div class="right-top">
+						
+					<div class="right-top-lt"><a href=""><img src="img/right-3.jpg" alt="" /></a></div>
+					<div class="right-top-rg">
+						<p><a class="rg-top" href="">索尼 Xperia Z5</a></p>
+						<p><a class="rg-middle" href="">￥--</a></p>
+						<p><a class="rg-footer" href="">本地服务</a></p>
+						<a class="rg-bottom" href="">到店团</a>
+					</div>
+					</div>
+					
+					
+				</div>
+
+				
+				
+				
+			</div>
+					
+			<div class="bg-pic"><a href="xiangqing.html"><img src="img/bg-1.jpg"/></a></div>
+			<div class="bg-pic-next">
+			<span></span><span>同城购</span><span>同城，身边，退换无忧</span>
+			<span>更多</span>
+			<span>></span>
+			</div>
+			
+			<div class="go">
+				<a href="xiangqing.html"><img src="img/GO-1.jpg" alt="" /></a>
+				<a href="xiangqing.html"><img src="img/GO-2.jpg" alt="" /></a>
+				<a href="xiangqing.html"><img src="img/GO-2.jpg" alt="" /></a>
+			</div>
+			
+			<div class="go-next">
+				<div class="go-next-list">
+					<a href="xiangqing.html"><img src="img/list-1.jpg" alt="" /></a>
+					<p><a href="">【顺丰包邮】OPPO P11plus..</a></p>
+					<p><span>￥3099.00</span><span>电商参考价：</span><span>￥34900.00</span></p>
+					
+					<div class="list-bottom"><a class="one" href="">商品评价</a><a class="one" href="">商品评价</a><a class="one" href="">商品评价</a></div>
+				</div>
+				
+				<div class="go-next-list">
+					<a href="xiangqing.html"><img src="img/list-2.jpg" alt="" /></a>
+					<p><a href="">【顺丰包邮】OPPO P11plus..</a></p>
+					<p><span>￥3099.00</span><span>电商参考价：</span><span>￥34900.00</span></p>
+					
+					<div class="list-bottom"><a class="one" href="">商品评价</a><a class="one" href="">商品评价</a><a class="one" href="">商品评价</a></div>
+				</div>
+				
+				
+				<div class="go-next-list">
+					<a href="xiangqing.html"><img src="img/list-3.jpg" alt="" /></a>
+					<p><a href="">【顺丰包邮】OPPO P11plus..</a></p>
+					<p><span>￥3099.00</span><span>电商参考价：</span><span>￥34900.00</span></p>
+					
+					<div class="list-bottom"><a class="one" href="">商品评价</a><a class="one" href="">商品评价</a><a class="one" href="">商品评价</a></div>
+				</div>
+				
+				<div class="go-next-list">
+					<a href="xiangqing.html"><img src="img/list-4.jpg" alt="" /></a>
+					<p><a href="">【顺丰包邮】OPPO P11plus..</a></p>
+					<p><span>￥3099.00</span><span>电商参考价：</span><span>￥34900.00</span></p>
+					
+					<div class="list-bottom"><a class="one" href="">商品评价</a><a class="one" href="">商品评价</a><a class="one" href="">商品评价</a></div>
+				</div>
+				
+				<div class="go-next-list">
+					<a href="xiangqing.html"><img src="img/list-5.jpg" alt="" /></a>
+					<p><a href="">【顺丰包邮】OPPO P11plus..</a></p>
+					<p><span>￥3099.00</span><span>电商参考价：</span><span>￥34900.00</span></p>
+					
+					<div class="list-bottom"><a class="one" href="">商品评价</a><a class="one" href="">商品评价</a><a class="one" href="">商品评价</a></div>
+				</div>
+			
+			</div>
+			
+				<div class="Z-zhi"><span></span><span>Z智选</span><span></span></div>
+				
+				
+				<div class="contain">
+				<div class="contain-top">
+					
+				
+						
+						<div class="left">
+							<div class="top">
+								<div class="top-left">
+									<ul id="left">
+										
+										
+										<li>影音</li>
+										<li>穿戴</li>
+										<li>家居</li>
+										<li>出行</li>
+										<li>美互</li>
+									</ul>
+								</div>
+								<div class="top-right" id="right">
+									<img src="img/pic-01.jpg" alt="" style="position: absolute;" />
+									<img src="img/pic-002.jpg" alt="" style="position: absolute;"/>
+									<img src="img/pic-002.jpg" alt="" style="position: absolute;" />
+									<img src="img/pic-01.jpg" alt="" style="position: absolute;" />
+									<img src="img/pic-002.jpg" alt="" style="position: absolute;" />
+								
+									
+								</div>
+							</div>
+							<div class="bottom">
+								<ul>
+									<li><img src="img/list-01.jpg" alt="" />
+									<p><a href="">雷神V600游戏手柄</a>	</p></li>
+									<li><img src="img/list-02.jpg" alt="" /><p><a href="">360老人亲情手表</a></p></li>
+									<li><img src="img/list-01.jpg" alt="" />	<p>	<a href="">雷神V600游戏手柄</a></p></li>
+									<li><img src="img/list-02.jpg" alt="" />
+									<p><a href="">360老人亲情手表</a></p></li>
+								</ul>
+							</div>
+							
+						
+						</div>
+						
+			
+						<div class="right">
+						<img src="img/list-05.jpg" alt="" />
+							<img src="img/list-06.jpg" alt="" />
+							<img src="img/list-07.jpg" alt="" />
+						</div>
+				</div>
+					
+					<div class="contain-bottom">
+						<div class="top">
+							<a href=""><img src="img/list-08.jpg" alt="" /></a>
+						</div>
+						<div class="bottom">
+							<a href=""><img src="img/list-09.jpg" alt="" /></a>
+						</div>
+					</div>
+					
+					<div class="Z-zhi"><span></span><span>品牌精选</span><span>大牌，保障，服务赞</span></div>
+					
+					
+					
+					
+					<div class="pinpai">
+						
+						
+						<ul>
+							<p>	<a href="xiangqing.html"><img src="img/pic-1.jpg" alt="" /></a></li></p>
+							<li><a href="xiangqing.html"><img src="img/lit-1.jpg" alt="" /></a>
+								
+								<h5><a href="">ThinkPad S2 i5高配赠豪礼</a></h5>
+								<span>RMB</span><a href="">　5,999</a>
+							</li>
+							<li class="one"><a href="xiangqing.html"><img src="img/lit-2.jpg" alt="" /></a>
+								<h5><a href="">联想710s i5+256G惊爆价</a></h5>
+								<span>RMB</span><a href="">　4,899</a>
+							</li>
+							<li><a href="xiangqing.html"><img src="img/lit-3.jpg" alt="" /></a>
+							<h5><a href="">联想锐7000 </a></h5>
+								<span>RMB</span><a href="">　5,999</a></li>
+							<li><a href=""><img src="img/lit-4.jpg" alt="" /></a>
+								<h5><a href="">联想拯救者 R700游戏版本</a></h5>
+								<span>RMB</span><a href="">　5,399</a>
+							</li>
+						</ul>
+					</div>
+					
+						<div class="Z-zhi"><span></span><span>电子竞技</span><span></span></div>
+						
+						
+				<div class="dianzi">
+				
+				<div class="left">
+					<h4><a>热门</a><span>电竞主机</span><span>电竞外设</span><span>游戏本</span></h4>
+					
+				<div class="lt-top">
+					<a href="xiangqing.html"><img src="img/lit-5.jpg" alt="" /></a>
+				</div>	
+					
+					<div class="lt-bottom">
+						<ul>
+							<li><a href="xiangqing.html"><img src="img/phone-1.jpg" alt="" /></a><p><a href="">先锋奔腾G3900/120G...</a></p><span>￥1399.00</span></li>
+							<li><a href="xiangqing.html"><img src="img/phone-2.jpg" alt="" /></a><p><a href="">先锋奔腾G3900/120G...</a></p><span>￥1399.00</span></li>
+							<li><a href="xiangqing.html"><img src="img/phone-3.jpg" alt="" /></a><p><a href="">先锋奔腾G3900/120G...</a></p><span>￥1399.00</span></li>
+						</ul>
+					</div>
+					
+					
+				</div>
+				<div class="right">
+					<h4><a>电竞DIY</a></h4>
+					<div class="lt-bottom">
+						<ul>
+							<li><a href="xiangqing.html"><img src="img/phone-1.jpg" alt="" /></a><p><a href="">先锋奔腾G3900/120G...</a></p><span>￥1399.00</span></li>
+							<li><a href="xiangqing.html"><img src="img/phone-2.jpg" alt="" /></a><p><a href="">先锋奔腾G3900/120G...</a></p><span>￥1399.00</span></li>
+							<li><a href="xiangqing.html"><img src="img/phone-3.jpg" alt="" /></a><p><a href="">先锋奔腾G3900/120G...</a></p><span>￥1399.00</span></li>
+						</ul>
+					</div>
+					
+					
+					<div class="lt-bottom">
+						<ul>
+							<li><a href="xiangqing.html"><img src="img/phone-1.jpg" alt="" /></a><p><a href="">先锋奔腾G3900/120G...</a></p><span>￥1399.00</span></li>
+							<li><a href="xiangqing.html"><img src="img/phone-2.jpg" alt="" /></a><p><a href="">先锋奔腾G3900/120G...</a></p><span>￥1399.00</span></li>
+							<li><a href="xiangqing.html"><img src="img/phone-3.jpg" alt="" /></a><p><a href="">先锋奔腾G3900/120G...</a></p><span>￥1399.00</span></li>
+						</ul>
+					</div>
+				</div>
+				</div>
+			
+			<div class="Z-zhi"><span></span><span>数码潮品</span><span>潮流，前端，黑科技</span></div>
+			
+			<div class="suma">
+				
+				<div class="suma-left">
+					<h4><a href="">摄影/摄像</a><span>更多</span>>></h4>
+					
+					<div class="middle">
+						<ul>
+							<li><a href="xiangqing.html"><img src="img/suma-1.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span>
+							</li>
+							<li><a href="xiangqing.html"></a><img src="img/suma-1.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span></li>
+							<li><a href="xiangqing.html"></a><img src="img/suma-3.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span></li>
+							<li><a href=""></a><img src="img/suma-4.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span></li>
+							<li><a href="xiangqing.html"></a><img src="img/suma-5.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span></li>
+							<li><a href="xiangqing.html"></a><img src="img/suma-6.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span></li>
+						</ul>
+						
+						
+						
+					</div>
+					
+					<div class="bottom">	
+						<ul>
+							<li><a href="xiangqing.html"><img src="img/picture-1.jpg" alt="" /></a></li>
+							<li><a href="xiangqing.html"><img src="img/picture-2.jpg" alt="" /></a>
+								
+							</li>
+							<li><a href="xiangqing.html"><img src="img/picture-3.jpg" alt="" /></a></li>
+							<li><a href="xiangqing.html"><img src="img/picture-4.jpg" alt="" /></a></li>
+						</ul>
+						
+						
+						
+						
+						
+						</div>
+					
+				</div>
+				<div class="suma-right">
+					
+					
+					
+						<h4><a href="">笔记本/平板</a><span>更多</span>>></h4>
+					
+					<div class="middle">
+						<ul>
+							<li><a href="xiangqing.html"><img src="img/com-1.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span>
+							</li>
+							<li><a href="xiangqing.html"></a><img src="img/com-2.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span></li>
+							<li><a href="xiangqing.html"></a><img src="img/com-3.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span></li>
+							<li><a href=""></a><img src="img/com-4.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span></li>
+							<li><a href=""></a><img src="img/com-5.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span></li>
+							<li><a href=""></a><img src="img/com-6.jpg" alt="" /></a>
+								<p><a href="">索尼A9画副微单单机</a></p><span>￥2688.00</span></li>
+						</ul>
+						
+						
+						
+					</div>
+					
+					<div class="bottom">	
+						<ul>
+							<li><a href="xiangqing.html"><img src="img/picture-1.jpg" alt="" /></a></li>
+							<li><a href="xiangqing.html"><img src="img/picture-2.jpg" alt="" /></a>
+								
+							</li>
+							<li><a href="xiangqing.html"><img src="img/picture-3.jpg" alt="" /></a></li>
+							<li><a href="xiangqing.html"><img src="img/picture-4.jpg" alt="" /></a></li>
+						</ul>
+							
+						</div>
+						
+				</div>
+			</div>
+			<div class="con">本周热销</div>	
+		<article>
+			<ul>
+				<li><a href="xiangqing.html"><img src="img/foo-1.jpg" alt="" />
+				</a><p><a href="">【官方授权 顺丰包邮】联想..</a></p>
+					
+				<a href="">￥5440.00</a></li>
+				<li><a href="xiangqing.html"><img src="img/foo-2.jpg" alt="" /></a><p><a href="">【官方授权 顺丰包邮】联想..</a></p><a href="">￥5440.00</a></li>
+				<li><a href="xiangqing.html"><img src="img/foo-3.jpg" alt="" /></a><p><a href="">【官方授权 顺丰包邮】联想..</a></p><a href="">￥5440.00</a></li>
+				<li><a href="xiangqing.html"><img src="img/foo-4.jpg" alt="" /></a><p><a href="">【官方授权 顺丰包邮】联想..</a></p><a href="">￥5440.00</a></li>
+				<li><a href="xiangqing.html"><img src="img/foo-5.jpg" alt="" /></a><p><a href="">【官方授权 顺丰包邮】联想..</a></p><a href="">￥5440.00</a></li>
+				<li><a href="xiangqing.html"><img src="img/foo-6.jpg"/></a><p><a href="">【官方授权 顺丰包邮】联想..</a></p><a href="">￥5440.00</a></li>
+				<li><a href="xiangqing.html"><img src="img/foo-7.jpg" alt="" /></a><p><a href="">【官方授权 顺丰包邮】联想..</a></p><a href="">￥5440.00</a></li>
+				<li><a href="xiangqing.html"><img src="img/foo-8.jpg"/></a><p><a href="">【官方授权 顺丰包邮】联想..</a></p><a href="">￥5440.00</a></li>
+				<li><a href="xiangqing.html"><img src="img/foo-9.jpg" alt="" /></a><p><a href="">【官方授权 顺丰包邮】联想..</a></p><a href="">￥5440.00</a></li>
+				<li><a href="xiangqing.html"><img src="img/foo-10.jpg" alt="" /></a><p><a href="">【官方授权 顺丰包邮】联想..</a></p><a href="">￥5440.00</a></li>
+			</ul>
+				
+		</article>
+			
+				</div>	
+	   </div>
+	   <div class="section">
+	   	   <div class="section-wrap">
+	   	   	
+	   	
+	   	   	<ul>
+	   	   		<li><a href="xiangqing.html"><img src="img/bot-1.jpg" alt="" /></a><span><p>先行赔付</p><p>权益受损先行赔付</p></span></li>
+	   	   		<li><a href="xiangqing.html"><img src="img/bot-2.jpg" alt="" /></a><span><p>先行赔付</p><p>权益受损先行赔付</p></span></li>
+	   	   		<li><a href="xiangqing.html"><img src="img/bot-3.jpg" alt="" /></a><span><p>先行赔付</p><p>权益受损先行赔付</p></span></li>
+	   	   		<li><a href="xiangqing.html"><img src="img/bot-4.jpg" alt="" /></a><span><p>先行赔付</p><p>权益受损先行赔付</p></span></li>
+	   	   		<li><a href="xiangqing.html"><img src="img/bot-5.jpg" alt="" /></a><span><p>先行赔付</p><p>权益受损先行赔付</p></span></li>
+	   	   		<li><a href="xiangqing.html"><img src="img/bot-6.jpg" alt="" /></a><span><p>先行赔付</p><p>权益受损先行赔付</p></span></li>
+	   	   	</ul>
+	  
+	   	   	<hr />
+	   	   	
+	   	   <div class="list">
+	   	   	
+	   	   	
+	   	   	<div class="list-left">
+	   	   		<ul>
+	   	   			<li><p>购物指南</p>
+	   	   			<p><a href="zhuce.html">账号注册</a></p><br />
+	   	   			<p><a href="">购物流程</a></p><br />
+	   	   			<p><a href="">付款方式</a></p>
+	   	   							
+	   	   				
+	   	   			</li>
+	   	   			
+	   	   			<li><p>售后服务</p>
+	   	   			<p><a href="">先行赔付</a></p><br />
+	   	   			<p><a href="">退款退货流程</a></p><br />
+	   	   			<p><a href="">投诉举报</a></p>
+	   	   					</li>
+	   	   					
+	   	   					
+	   	   					<li><p>商城保障</p>
+	   	   			<p><a href="">正品保障</a></p><br />
+	   	   			<p><a href="">物流保障</a></p><br />
+	   	   			<p><a href="">24小时发货</a></p>
+	   	   					</li>
+	   	   			<li><p>商家服务</p>
+	   	   			<p><a href="">商家中心</a></p><br />
+	   	   			
+	   	   					</li>
+	   	   			
+	   	   		</ul>
+	    	   		
+	   	   	</div>
+	   	   	<div class="list-right">
+	   	   	
+	   	   	<li>
+	   	   		<p>400-688-1999</p><p>工作日 9:00-18:00</p>
+	   	   	</li>
+	   	    <li><p>商家合作</p><p>错过天猫，别再错过我们</p><p>Z商城开启全新旅程</p></li>
+	   	   	</div>
+	   	   </div>
+	   	   
+	   	   </div>
+	 
+	   </div>
+	   
+	   
+	   <footer>	
+	   
+	   <div class="footer-wrap">
+	   	<li><p><a href="">中关村在线</a><span>|</span><a href="">Z商城</a><span>|</span><a href="">团购</a><span>|</span><a href="">产品品报价</a><span>|</span><a href="">论坛</a><span>|</span><a href="">问答</a></p>
+	   		
+	   	<p><a href="">关于Z商城</a><span>|</span><a href="">帮助中心</a><span>|</span><a href="">联系我们</a></p>	
+	   		
+	   		
+	   	<p>&copy;2017中关村在线 版权所有,京ICP备14061128号 京公网安备11010802020026号</p>	
+	   	
+	   	</li>
+	   	<li>
+	   	<a href=""><img src="img/bot-8.jpg" alt="" /></a></li>
+	   </div>
+	   </footer>
+	</body>
+	<script>
+		$(function(){
+			var ul=document.getElementById("left");
+			var div=document.getElementById("right");
+			var img=div.getElementsByTagName("img")
+			var lis=ul.getElementsByTagName("li");
+			console.log(lis);
+			for(var i=0;i<lis.length;i++){
+				(function(n){
+					lis[i].onmouseenter=function(){
+						for(var j=0;j<lis.length;j++){
+							
+							lis[j].className="";
+							img[j].style.display="none";
+						    lis[j].style.backgroundColor="";
+						}
+						this.className="after";
+						this.style.backgroundColor="#ce1a1b";
+						img[n].style.display="block";
+					}
+				}(i))
+			
+		}
+			
+			
+			//登陆过后的状态
+			var username=location.search.split("user=")[1];
+			if(username!=undefined && username!="undefined"){
+//				$(".header-first span.eq(3).hide
+//				$(".ino").html("欢迎你"+username)
+			}else{
+//				3ge.show   kong.hide
+			}
+			
+			
+	})
+	</script>
+</html>
